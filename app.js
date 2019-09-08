@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 var indexRouter = require('./routes/index');
+var hbs = require('hbs');
+var hbs_helpers = require('./hbs_helpers');
 
 var app = express();
 
@@ -31,6 +33,9 @@ app.use('/', indexRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+// handlebars helpers registration for use in .hbs files
+hbs.registerHelper('for', hbs_helpers.for_helper);
 
 // error handler
 app.use(function(err, req, res, next) {

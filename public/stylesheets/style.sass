@@ -1,6 +1,33 @@
+@import "variables"
+@import "placeholders"
+
+html
+  height: 100%
+
 body
-  padding: 50px
+  height: 100%
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
 
-a
-  color: #0efdff
+.panel
+  @extend %full-height
+  .row
+    margin-top: $panel-row-margin-top
+    min-height: (100 - ($panel-row-margin-top * 8)) / 8
+    height: (100 - ($panel-row-margin-top * 8)) / 8
+    .col
+      @extend %full-height
+      text-align: center
+      font-size: $panel-font-size-sm
+      background: #f8f8f8
+      /* Large devices (large desktops, 1200px and up) */
+      @media (min-width: $screen-lg)
+          font-size: $panel-font-size-lg
+      span
+        line-height: 140px
+        /* Large devices (large desktops, 1200px and up) */
+        @media (min-width: $screen-lg)
+          line-height: 80px
+      .btn
+        font-size: $panel-font-size-sm
+        @media (min-width: $screen-lg)
+          font-size: $panel-font-size-lg
