@@ -62,3 +62,11 @@ typings/
 
 # WebStorm project files
 .idea
+
+# SASS compiled files
+public/stylesheets/*.css
+public/stylesheets/*.map
+
+# MacOS files
+.DS_Store
+public/.DS_Store
