@@ -1,8 +1,6 @@
-// TODO poner la URL correcta
-
 $(document).ready(function(){
 
-    let socket = io.connect('http://localhost:3000', { 'forceNew': true });
+    let socket = io.connect(document.URL, { 'forceNew': true });
     let actual_value = 0;
 
     for(let i = 0; i < 8; i++)
