@@ -1,5 +1,5 @@
 # ledc.io
-Client/server app written in Node.js to light LEDs by sending data through socket.io and writing it to the LPT port with the [lpt](https://www.npmjs.com/package/lpt) module. I run this app on [frankenstein](https://github.com/brunopk/frankenstein) but **having a working LPT port is enough.** 
+Client/server app written in Node.js to light LEDs by sending data with socket.io and writing it to the LPT port with [lpt](https://www.npmjs.com/package/lpt). I run this app on [frankenstein](https://github.com/brunopk/frankenstein) but **having a working LPT port is enough.** 
 
 ## Running (debug mode)
 1. Add user to the lp group : ``usermod -a -G lp alarm``
