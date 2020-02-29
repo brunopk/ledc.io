@@ -1,16 +1,20 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var sassMiddleware = require('node-sass-middleware');
-var indexRouter = require('./routes/index');
-var hbs = require('hbs');
-var hbsHelpers = require('./hbs-helpers');
+let fs = require('fs');
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+let sassMiddleware = require('node-sass-middleware');
+let indexRouter = require('./routes/index');
+let hbs = require('hbs');
+let hbsHelpers = require('./hbs-helpers');
 
-var app = express();
+let app = express();
+let hbsPartialsDir = __dirname + '/views/partials';
 
-// view engine setup
+/*
+ * View engine setup
+ */
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
@@ -34,10 +38,24 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// handlebars helpers registration for use in .hbs files
+/*
+ * Handlebars
+ */
 hbs.registerHelper('for', hbsHelpers.forHelper);
+// Extracted from https://gist.github.com/benw/3824204
+fs.readdirSync(hbsPartialsDir).forEach(function (filename) {
+  var matches = /^([^.]+).hbs$/.exec(filename);
+  if (!matches) {
+    return;
+  }
+  var name = matches[1];
+  var template = fs.readFileSync(hbsPartialsDir + '/' + filename, 'utf8');
+  hbs.registerPartial(name, template);
+});
 
-// error handler
+/*
+ * error handler
+ */
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
