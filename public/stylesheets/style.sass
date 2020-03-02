@@ -34,37 +34,21 @@ body
 .effects-panel
   $font-size-lg: 2rem
   $font-size-sm: 7rem
-  $row-height-lg: 10rem
-  $row-height-sm: 20rem
+  height: 100%
   font-size: $font-size-sm
   @media (min-width: $screen-lg)
     font-size: $font-size-lg
   div, a, button, span
     font-size: inherit
   .row
+    height: 12%
     .col
       background-color: $light-gray
-      height: $row-height-sm
+      height: 100%
       padding: 1rem 1rem
-      @media (min-width: $screen-lg)
-        height: $row-height-lg
-      button, a, span
+      button, a
         width: 100%
-      a, button
-        height: $row-height-sm - 2
-        @media (min-width: $screen-lg)
-          height: $row-height-lg - 2
-        span
-          height: $row-height-sm - 4
-          line-height: $row-height-sm - 4
-          @media (min-width: $screen-lg)
-            height: $row-height-lg - 4
-            line-height: $row-height-lg - 4
-    .col-label
-      line-height: $row-height-sm - 2
-      text-align: center
-      @media (min-width: $screen-lg)
-        line-height: $row-height-lg - 2
+        height: 100%
 
 .led
   $size: 30px

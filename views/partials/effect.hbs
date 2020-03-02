@@ -1,9 +1,13 @@
 <div id="e{{id}}" class="row effect">
-    <div class="col-sm-2 col-lg-1 col-lg-offset-4 col col-label">E{{id}}</div>
+    <div class="col-sm-2 col-lg-1 col-lg-offset-4 col">
+        <button class="btn btn-default">
+            <span>E{{id}}</span>
+        </button>
+    </div>
     <div class="col-sm-2 col-lg-1 col">
-        <a class="btn btn-default" role="button" data-toggle="collapse" href="#effect-config-{{id}}" aria-expanded="false" aria-controls="effect-config-{{id}}">
+        <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#effect-config-{{id}}" aria-expanded="false" aria-controls="effect-config-{{id}}">
             <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-        </a>
+        </button>
     </div>
     <div class="col-sm-8 col-lg-2 col">
         <button class="btn btn-success" type="submit">
