@@ -1,4 +1,4 @@
-<div id="e{{id}}" class="row effect">
+<div id="e{{id}}" class="row">
     <div class="col-sm-2 col-lg-1 col-lg-offset-4 col">
         <button class="btn btn-default">
             <span>E{{id}}</span>
@@ -17,6 +17,15 @@
 </div>
 <div class="collapse row" id="effect-config-{{id}}">
     <div class="col-lg-4 col-lg-offset-4 col">
-        ...
+        <input
+                type="text"
+                name="somename"
+                data-provide="slider"
+                data-slider-min="1"
+                data-slider-max="2000"
+                data-slider-step="1"
+                data-slider-value="1000"
+                data-slider-tooltip="hide"
+        >
     </div>
 </div>
