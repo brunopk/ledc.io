@@ -22,7 +22,7 @@ Currently LEDs are controlled sending signals through the and writing the LPT po
 
 ## How to install client side dependencies (javascript and stylesheet)
 
-1. Find the name of the dependency (for instance on `jquery`)
+1. Find the name of the dependency (for instance `jquery`)
 2. Edit postinstall script (`bin/postinstall`):
     ```javascript
     require('fs').unlink(require('path').resolve('public/jquery'), function(){
