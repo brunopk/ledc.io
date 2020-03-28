@@ -20,7 +20,7 @@ Currently LEDs are controlled sending signals through the and writing the LPT po
 2. Install dependencies : `yarn install`
 3. Run it: `yarn debug`
 
-## How to install client side dependencies (javascript and CSS)
+## How to install client side dependencies (javascript and stylesheet)
 
 1. Find the name of the dependency (for instance on [yarn repository](https://classic.yarnpkg.com/lang/en/))
 2. Edit postinstall script (`bin/postinstall`), for instance if dependency is `jquery` :
@@ -29,7 +29,7 @@ Currently LEDs are controlled sending signals through the and writing the LPT po
         require('fs').symlinkSync(require('path').resolve('node_modules/jquery'), 'public/jquery', 'junction')
     })
     ````
-3. Run `yarn add <dependency>` (following previous example `yarn add jquery`)
+3. Install dependency, for instance : `yarn add jquery`
 
 > Its recommended to add the symlink folder created on step 2 to the `.gitignore`
 
