@@ -1,7 +1,7 @@
 # ledc.io
 Client/server app written in Node.js to light LEDs by sending data with socket.io 
 
-Currently LEDs are controlled sending signals through the and writing the LPT port (with the [lpt node module](https://www.npmjs.com/package/lpt)). I run this app on [frankenstein](https://github.com/brunopk/frankenstein) but **having a working LPT port is enough.** Next step is to control them also with de GPIO ports of the Raspberry Pi. 
+Currently LEDs are controlled sending signals through the and writing the LPT port (with the [lpt node module](https://www.npmjs.com/package/lpt)). I run this app on [frankenstein](https://github.com/brunopk/frankenstein) but **having a working LPT port is enough.** Next step is using the GPIO ports of the Raspberry Pi. 
 
 ## Requirements
 
@@ -12,7 +12,7 @@ Currently LEDs are controlled sending signals through the and writing the LPT po
 
 1. Add user to the lp group : `usermod -a -G lp alarm`
 2. Install dependencies : `yarn install`
-3. Run it: `yarn debug`
+3. Run it: `yarn start`
 
 ## Running (debug mode)
 
