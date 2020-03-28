@@ -1,0 +1,15 @@
+require('fs').unlink(require('path').resolve('public/seiyria-bootstrap-slider'), function(){
+    require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components/seiyria-bootstrap-slider'), 'public/seiyria-bootstrap-slider', 'junction')
+})
+require('fs').unlink(require('path').resolve('public/bootstrap'), function(){
+    require('fs').symlinkSync(require('path').resolve('node_modules/bootstrap'), 'public/bootstrap', 'junction')
+})
+require('fs').unlink(require('path').resolve('public/jquery'), function(){
+    require('fs').symlinkSync(require('path').resolve('node_modules/jquery'), 'public/jquery', 'junction')
+})
+require('fs').unlink(require('path').resolve('public/bootstrap-toggle'), function(){
+    require('fs').symlinkSync(require('path').resolve('node_modules/bootstrap-toggle'), 'public/bootstrap-toggle', 'junction')
+})
+
+
+

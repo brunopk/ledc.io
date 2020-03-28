@@ -1,19 +1,27 @@
 {
   "name": "ledc.io",
-  "version": "0.0.0",
-  "private": true,
+  "version": "2.0.0",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node bin/www",
+    "debug": "DEBUG=ledc.io:* node bin/www",
+    "postinstall": "node bin/postinstall"
+  },
+  "engines": {
+    "node": "10.16.3",
+    "yarn": ">= 1.0.0"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "hbs": "~4.0.4",
-    "http-errors": "~1.6.3",
-    "lpt": "^0.4.0",
-    "morgan": "~1.9.1",
-    "node-sass-middleware": "^0.11.0",
-    "socket.io": "^2.3.0"
+    "@bower_components/seiyria-bootstrap-slider": "seiyria/bootstrap-slider#^10.6.2",
+    "bootstrap": "3.4.1",
+    "bootstrap-toggle": "2.2.2",
+    "cookie-parser": "1.4.4",
+    "debug": "2.6.9",
+    "express": "4.16.1",
+    "hbs": "4.0.4",
+    "http-errors": "1.6.3",
+    "jquery": "3.4.1",
+    "morgan": "1.9.1",
+    "node-sass-middleware": "0.11.0",
+    "socket.io": "2.3.0"
   }
 }
